@@ -11,11 +11,11 @@ public class WheelOfFortune {
 	
 	public static Stack SortS1(Stack S1) {
 		
-		int size1 = S1.size();// country sayısı kadar döngü kurmak için
-		int size2 = S1.size()+1;// her döngüde en küçük olan pop edilip size1 in  bir azaltılmış hali
-		Stack tempstack1 = new Stack(size1);// her döngüde alfabetik olarak en küçük eleman  hariç temstack1 in içine atılır
-		Stack tempstack2 = new Stack(size1);//alfabetik sıralı olarak sırayla tempstack2 nin  içine atılır
-		String minWord = S1.peek().toString();// en küçük eleman minWord e eşitlenir.
+		int size1 = S1.size();// country sayÃ½sÃ½ kadar dÃ¶ngÃ¼ kurmak iÃ§in
+		int size2 = S1.size()+1;// her dÃ¶ngÃ¼de en kÃ¼Ã§Ã¼k olan pop edilip size1 in  bir azaltÃ½lmÃ½Ã¾ hali
+		Stack tempstack1 = new Stack(size1);// her dÃ¶ngÃ¼de alfabetik olarak en kÃ¼Ã§Ã¼k eleman  hariÃ§ temstack1 in iÃ§ine atÃ½lÃ½r.
+		Stack tempstack2 = new Stack(size1);//alfabetik sÃ½ralÃ½ olarak sÃ½rayla tempstack2 nin  iÃ§ine atÃ½lÃ½r
+		String minWord = S1.peek().toString();// en kÃ¼Ã§Ã¼k eleman minWord e eÃ¾itlenir.
 		
 		
 		for(int i=0;i<size1;i++) {
@@ -30,7 +30,7 @@ public class WheelOfFortune {
 			}
 		}
 		tempstack2.push(minWord);
-		while (! (tempstack1.isEmpty()))//alfabetik sıralamadaki kelime tekrar S1 e push edilmez
+		while (! (tempstack1.isEmpty()))//alfabetik sÃ½ralamadaki kelime tekrar S1 e push edilmez
 		{   if(tempstack1.peek().toString().equalsIgnoreCase(minWord)) {
 			tempstack1.pop();
 		}
@@ -38,7 +38,7 @@ public class WheelOfFortune {
 			S1.push(tempstack1.pop());
 		}
            
-           //döngüdeki en küçük elemanı bulabilmek için
+           //dÃ¶ngÃ¼deki en kÃ¼Ã§Ã¼k elemanÃ½ bulabilmek iÃ§in
            minWord="zzzzz";
 		}
 		
@@ -131,12 +131,12 @@ public class WheelOfFortune {
 public static Stack SortS4( Stack S4 ) {
 		
 	
-	   boolean flagS4;//score lar eşit olunca sadece bir tanesini pop etmek için
-		int size1 = S4.size();//kişi-score sayısı kadar döngü kurmak için
-		int size2 = S4.size()+1;// her döngüde max olan pop edildiğinden  1 azalacak
-		Stack tempstack1 = new Stack(size1);// her döngüde max score hariç temstack1 in içine atılır
-		Stack tempstack2 = new Stack(size1);//büyükten küçüğe tempstack2 nin  içine atılır
-		int maxScore = (int)S4.peek();// en büyük score maxScore a eşitlenir eşitlenir.
+	   boolean flagS4;//score lar eÃ¾it olunca sadece bir tanesini pop etmek iÃ§in
+		int size1 = S4.size();//kiÃ¾i-score sayÃ½sÃ½ kadar dÃ¶ngÃ¼ kurmak iÃ§in
+		int size2 = S4.size()+1;// her dÃ¶ngÃ¼de max olan pop edildiÃ°inden  1 azalacak
+		Stack tempstack1 = new Stack(size1);// her dÃ¶ngÃ¼de max score hariÃ§ temstack1 in iÃ§ine atÃ½lÃ½r
+		Stack tempstack2 = new Stack(size1);//bÃ¼yÃ¼kten kÃ¼Ã§Ã¼Ã°e tempstack2 nin  iÃ§ine atÃ½lÃ½r
+		int maxScore = (int)S4.peek();// en bÃ¼yÃ¼k score maxScore a eÃ¾itlenir eÃ¾itlenir.
 		
 		
 		for(int i=0;i<size1;i++) {
@@ -162,7 +162,7 @@ public static Stack SortS4( Stack S4 ) {
 			S4.push(tempstack1.pop());
 		}
            
-           //döngüdeki en büyük score u bulabilmek için
+           //dÃ¶ngÃ¼deki en bÃ¼yÃ¼k score u bulabilmek iÃ§in
 		  maxScore =-1;
 		}
 		
@@ -181,15 +181,15 @@ public static Stack SortS4( Stack S4 ) {
 public static Stack SortS3( Stack S4,Stack S3 ) {
 	
 	
-	    boolean flagS3;//score lar eşit olunca sadece bir tanesini pop etmek için
-		int size1 = S4.size();// kişi-Score  kadar döngü kurmak için
-		int size2 = S4.size()+1;// her döngüde max olan  pop edilip size 1 azalacak
-		Stack tempstack1S4 = new Stack(size1);// her döngüde max score hariç temstack1 in içine atılır
-		Stack tempstack2S4 = new Stack(size1);//score büyükten küçüğe sırayla tempstack2 nin  içine atılır
-		Stack tempstack1S3 = new Stack(size1);// her döngüde max score lu kişi  hariç temstack1 in içine atılır
-		Stack tempstack2S3 = new Stack(size1);//score u çok olandan az olana sırayla tempstack2 nin  içine atılır
-		int maxScore = (int)S4.peek();// stack teki en büyük puan  maxScore a eşitlenir.
-		String bestContestant = S3.peek().toString();// stack teki maxScore u  olan kişi bestContestant a eşitlenir.
+	    boolean flagS3;//score lar eÃ¾it olunca sadece bir tanesini pop etmek iÃ§in
+		int size1 = S4.size();// kiÃ¾i-Score  kadar dÃ¶ngÃ¼ kurmak iÃ§in
+		int size2 = S4.size()+1;// her dÃ¶ngÃ¼de max olan  pop edilip size 1 azalacak
+		Stack tempstack1S4 = new Stack(size1);// her dÃ¶ngÃ¼de max score hariÃ§ temstack1 in iÃ§ine atÃ½lÃ½r
+		Stack tempstack2S4 = new Stack(size1);//score bÃ¼yÃ¼kten kÃ¼Ã§Ã¼Ã°e sÃ½rayla tempstack2 nin  iÃ§ine atÃ½lÃ½r
+		Stack tempstack1S3 = new Stack(size1);// her dÃ¶ngÃ¼de max score lu kiÃ¾i  hariÃ§ temstack1 in iÃ§ine atÃ½lÃ½r
+		Stack tempstack2S3 = new Stack(size1);//score u Ã§ok olandan az olana sÃ½rayla tempstack2 nin  iÃ§ine atÃ½lÃ½r
+		int maxScore = (int)S4.peek();// stack teki en bÃ¼yÃ¼k puan  maxScore a eÃ¾itlenir.
+		String bestContestant = S3.peek().toString();// stack teki maxScore u  olan kiÃ¾i bestContestant a eÃ¾itlenir.
 		
 		
 		for(int i=0;i<size1;i++) {
@@ -223,7 +223,7 @@ public static Stack SortS3( Stack S4,Stack S3 ) {
 			}
 		}
            
-           //döngüdeki max score u bulabilmek için
+           //dÃ¶ngÃ¼deki max score u bulabilmek iÃ§in
 		  maxScore =-1;
 		}
 		
@@ -248,7 +248,7 @@ public static Stack SortS3( Stack S4,Stack S3 ) {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			//oyuncu adını girer
+			//oyuncu adÃ½nÃ½ girer
         Scanner sc =new Scanner(System.in);
         System.out.print("Please Enter your name: ");
         String name=sc.nextLine();
@@ -276,15 +276,15 @@ public static Stack SortS3( Stack S4,Stack S3 ) {
         	S1.push(countryReader.nextLine());
         }
         countryReader.close();
-        //S1 alfabetik olarak sortlandı
+        //S1 alfabetik olarak sortlandÃ½
         S1= SortS1( S1);
         
-        //sorulan rastgele ülke
+        //sorulan rastgele Ã¼lke
         Random random=new Random();
         int sizeS1=S1.size();
         String word=" ";
         Stack tempstackForRandom = new Stack(sizeS1);
-        int randomlyNumber=random.nextInt(1,sizeS1+1);//ekrana yazılacak
+        int randomlyNumber=random.nextInt(1,sizeS1+1);//ekrana yazÃ½lacak
         System.out.println("Randomly generated number: "+randomlyNumber);
         while(word==" ") {
           if(S1.size()==randomlyNumber) {
@@ -296,7 +296,7 @@ public static Stack SortS3( Stack S4,Stack S3 ) {
           }
         }
         
-        //s1 eski haline döndü
+        //s1 eski haline dÃ¶ndÃ¼
         while (! (tempstackForRandom.isEmpty()))
 			S1.push(tempstackForRandom.pop());
         
@@ -339,11 +339,11 @@ public static Stack SortS3( Stack S4,Stack S3 ) {
 			tempstackS2.push(S2.pop());
 		}
 		while (! (tempstackS2.isEmpty())) {
-			System.out.print(tempstackS2.peek());//alfabenin yazdırılması
+			System.out.print(tempstackS2.peek());//alfabenin yazdÃ½rÃ½lmasÃ½
 			S2.push(tempstackS2.pop());
 		}
 		
-       //doğru ülkeyi tam yazdıran son yazım için
+       //doÃ°ru Ã¼lkeyi tam yazdÃ½ran son yazÃ½m iÃ§in
 		if(counterCorrectLetter==word.length() || lastloop==1 ) {
 	    	 lastloop++;
 	    	 break;
@@ -358,7 +358,7 @@ public static Stack SortS3( Stack S4,Stack S3 ) {
 		int randomLetterNumber = rand.nextInt(1,sizeS2+1);
         for(int i=0;i<sizeS2;i++) {
         	if(S2.size() == randomLetterNumber) {
-        		randomLetter = S2.pop().toString();//randomletter yani guess alfabe içine, push edilmez
+        		randomLetter = S2.pop().toString();//randomletter yani guess alfabe iÃ§ine, push edilmez
         	}
         	else {
         		tempstackS2.push(S2.pop());
@@ -433,11 +433,11 @@ public static Stack SortS3( Stack S4,Stack S3 ) {
         contestantReader.close();
          
       
-        //sortlanmış S3 ve S4
+        //sortlanmÃ½Ã¾ S3 ve S4
          System.out.println("\nHigh Score Table");
         S3= SortS3( S4 , S3 );
         S4= SortS4( S4);
-    //high score table yazdırma   
+    //high score table yazdÃ½rma   
     Stack tempstack4S4 = new Stack(S4.size());
     Stack tempstack3S3 = new Stack(S3.size());
 		
